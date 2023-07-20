@@ -1,0 +1,17 @@
+apiVersion: api.scaleroperator.io/v4alpha1
+kind: Scalar
+metadata:
+  labels:
+    app.kubernetes.io/name: scalar
+    app.kubernetes.io/instance: scalar-sample
+    app.kubernetes.io/part-of: operator-sdk
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: operator-sdk
+  name: scalar-sample
+spec:
+  start : 12
+  end : 14
+  replicas: 5
+  deployments:
+    - name: nginx
+      namespace: default
