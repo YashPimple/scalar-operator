@@ -6,7 +6,7 @@ Used to scale up the deployments
 
 To get started with the operaor, follow the steps below:
 
-Clone repository from GitHub:
+clone repository from GitHub:
 ```
 git clone https://github.com/YashPimple/scalar-operator.git
 ```
@@ -23,7 +23,7 @@ make manifests
 kubectl apply -f config/crd/bases/api.scalaroperator.io_scalars.yaml
 ```
 
-then run a `nginx` deployment on your cluster
+then run an `nginx` deployment on your cluster
 
 ```
 kubectl create deployment nginx --image=nginx
@@ -50,4 +50,16 @@ kubectl apply -f config/samples/api_v4alpha1_scaler.yaml
 Finally you can now check the number of replicas using the following command 
 ```
 kubectl get pods
+```
+
+## Output:
+
+```
+ yashpimple@Yashs-Air ~ % kubectl get pods
+NAME                    READY   STATUS              RESTARTS   AGE
+nginx-8f458dc5b-ls5wk   0/1     ContainerCreating   0          2s
+nginx-8f458dc5b-nlbg7   0/1     ContainerCreating   0          2s
+nginx-8f458dc5b-rk588   0/1     ContainerCreating   0          2s
+nginx-8f458dc5b-tz6jl   0/1     ContainerCreating   0          2s
+nginx-8f458dc5b-wz97m   1/1     Running             0          29s
 ```
