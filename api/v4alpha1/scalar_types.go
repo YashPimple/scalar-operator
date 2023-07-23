@@ -31,17 +31,7 @@ const (
 )
 
 type ScalarSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
-
-	// +kubebuilder:validation:Maximum=23
-	// +kubebuilder:validation:Minimum=0
-	// +kubebuilder:validation:Required
 	Start int `json:"start"`
-
-	// +kubebuilder:validation:Maximum=23
-	// +kubebuilder:validation:Minimum=0
-	// +kubebuilder:validation:Required
 	End int `json:"end"`
 
 	// +kubebuilder:validation:Required
